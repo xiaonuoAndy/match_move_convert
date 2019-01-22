@@ -132,7 +132,7 @@ class SynthEyesTracker(BaseTracker):
             track_data.name = tracker_name
             track_data.index = index
             track_data.key_start = 1
-            track_data.key_end = len(track_data.frames)
+            track_data.key_end = len(track_data.frames) + 1
             track_data.frames.append(line_info[1])
             x, y = self.remap_xy(float(line_info[2]), float(line_info[3]), w, h)
             track_data.values.append([x, y, 1])
